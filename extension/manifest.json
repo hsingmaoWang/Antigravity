@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Antigravity Google Patents Integration",
+  "version": "1.0",
+  "description": "Extracts Google Patents data and passes it to the Antigravity local app.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://patents.google.com/*",
+    "http://localhost:5173/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Antigravity"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
