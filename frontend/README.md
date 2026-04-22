@@ -1,16 +1,22 @@
-# React + Vite
+# Antigravity Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+這是 Antigravity 專案的前端部分，使用 React + Vite 建構。
 
-Currently, two official plugins are available:
+## 快速開始
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+詳細的專案說明與部署方式，請參閱根目錄的 [README.md](../README.md)。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 建置與部署
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+```
+
+建置後的檔案將存放在 `dist` 資料夾中。

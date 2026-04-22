@@ -26,22 +26,35 @@ venv/
 env/
 .env
 *.env
+.python-version
+.pytest_cache/
+.coverage
+htmlcov/
 backend/temp_processing/
-backend/venv/
 
 # --- Node.js / Frontend ---
 node_modules/
-frontend/node_modules/
 dist/
-frontend/dist/
-frontend/dist-ssr/
+dist-ssr/
+*.local
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 .eslintcache
 .next/
 out/
-build/
+.parcel-cache
+.yarn/
+.pnp.*
+
+# --- Browser Extension ---
+*.crx
+*.xpi
+*.pem
+extension/out/
+extension/dist/
 
 # --- OS / IDE ---
 .DS_Store
@@ -58,6 +71,10 @@ Thumbs.db
 *.swo
 *.sublime-project
 *.sublime-workspace
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
 
 # --- Misc / Project Specific ---
 *.pptx
@@ -66,3 +83,4 @@ logs/
 *.log
 tmp/
 temp/
+# Note: .agents/ is kept as it contains project rules and skills
