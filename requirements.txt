@@ -5,7 +5,6 @@ requests==2.32.3
 python-pptx==0.6.21
 pymupdf==1.24.4
 beautifulsoup4==4.12.3
-lxml==5.2.2
 flake8==7.0.0
 google-genai==0.3.0
 python-dotenv==1.0.1

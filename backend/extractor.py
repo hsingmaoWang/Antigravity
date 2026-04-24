@@ -46,7 +46,7 @@ def scrape_google_patents(url: str):
     try:
         response = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
         response.raise_for_status()
-        soup = BeautifulSoup(response.text, 'lxml')
+        soup = BeautifulSoup(response.text, 'html.parser')
         
         # Google Patents usually has a <section itemprop="description"> or <div class="claims">
         claims_section = soup.find('section', itemprop='claims')
