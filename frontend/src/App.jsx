@@ -41,18 +41,18 @@ function App() {
       if (sourceType === 'file') {
         const formData = new FormData();
         formData.append('file', data);
-        response = await fetch('http://localhost:8000/api/process/pdf', {
+        response = await fetch('/api/process/pdf', {
           method: 'POST',
           body: formData,
         });
       } else if (sourceType === 'url') {
-        response = await fetch('http://localhost:8000/api/process/url', {
+        response = await fetch('/api/process/url', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ url: data }),
         });
       } else if (sourceType === 'extension') {
-        response = await fetch('http://localhost:8000/api/process/extension', {
+        response = await fetch('/api/process/extension', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data),
