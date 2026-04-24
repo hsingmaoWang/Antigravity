@@ -1,3 +1,5 @@
+# --- 修改 1: 在檔案頂部新增導入 ---
+import tempfile  # <--- 新增這行
 import sys
 import os
 import logging
