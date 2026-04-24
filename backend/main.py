@@ -9,14 +9,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from fastapi.responses import FileResponse
 
-# Ensure the backend directory is in the path for Vercel deployment
-current_dir = os.path.dirname(os.path.abspath(__file__))
-if current_dir not in sys.path:
-    sys.path.append(current_dir)
-
-from extractor import extract_pdf_content, scrape_google_patents
-from analyzer import identify_independent_claims, extract_and_map_elements
-from pptx_generator import generate_claim_chart_pptx
+from .extractor import extract_pdf_content, scrape_google_patents
+from .analyzer import identify_independent_claims, extract_and_map_elements
+from .pptx_generator import generate_claim_chart_pptx
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
