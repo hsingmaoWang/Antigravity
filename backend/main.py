@@ -56,7 +56,9 @@ async def process_pdf(file: UploadFile = File(...)):
     logger.info(f"Received PDF file: {file.filename}")
     
     run_id = str(uuid.uuid4())
-    temp_dir = os.path.join("temp_processing", run_id)
+# --- 修改 2: 修改 PDF 處理的暫存路徑 ---
+#    temp_dir = os.path.join("temp_processing", run_id)
+temp_dir = os.path.join(tempfile.gettempdir(), "temp_processing", run_id)
     os.makedirs(temp_dir, exist_ok=True)
     
     temp_pdf_path = os.path.join(temp_dir, file.filename)
@@ -116,7 +118,9 @@ async def process_extension(request: ExtensionDataRequest):
     logger.info(f"Received extension data for patent: {request.patent_number}")
     
     run_id = str(uuid.uuid4())
-    temp_dir = os.path.join("temp_processing", run_id)
+# --- 修改 3: 修改瀏覽器擴充功能數據處理的暫存路徑 ---    
+#    temp_dir = os.path.join("temp_processing", run_id)
+temp_dir = os.path.join(tempfile.gettempdir(), "temp_processing", run_id)
     images_dir = os.path.join(temp_dir, "images")
     os.makedirs(images_dir, exist_ok=True)
     
