@@ -2,7 +2,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "openDapp") {
         const patentData = request.data;
         // The URL of your local Antigravity server
-        const targetUrl = "http://localhost:5173/";
+        //local後台    const targetUrl = "http://localhost:5173/";
+        const targetUrl = "https://antigravity-phi-six.vercel.app";
 
         chrome.tabs.create({ url: targetUrl }, (newTab) => {
             // We wait for the new tab to be fully loaded so we can inject the script safely
@@ -10,7 +11,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
                 if (tabId === newTab.id && changeInfo.status === 'complete') {
                     // Remove the listener once caught
                     chrome.tabs.onUpdated.removeListener(listener);
-                    
+
                     // Inject data into local storage of the frontend
                     chrome.scripting.executeScript({
                         target: { tabId: tabId },
