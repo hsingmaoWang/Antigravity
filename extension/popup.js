@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         statusDiv.textContent = "Extracting...";
         try {
             const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-            
+
             if (!tab.url.startsWith("https://patents.google.com/")) {
                 statusDiv.textContent = "Error: Please navigate to a specific Google Patent page.";
                 return;
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Send to background script to handle opening the tab we have permissions for
                 chrome.runtime.sendMessage({ action: "openDapp", data: data });
             } else {
-                 statusDiv.textContent = "Error: Could not extract data.";
+                statusDiv.textContent = "Error: Could not extract data.";
             }
 
         } catch (error) {

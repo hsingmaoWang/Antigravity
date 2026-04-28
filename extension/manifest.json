@@ -9,7 +9,8 @@
   ],
   "host_permissions": [
     "https://patents.google.com/*",
-    "http://localhost:5173/*"
+    "http://localhost:5173/*",
+    "https://antigravity-phi-six.vercel.app/*"
   ],
   "action": {
     "default_popup": "popup.html",
